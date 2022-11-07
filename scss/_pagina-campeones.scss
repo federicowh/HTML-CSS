@@ -1,0 +1,109 @@
+$color-background: #bfbfbf;
+$color-amarillo: #EBA272;
+$sombras: 0 0 20px rgba(0, 0, 0, 0.55);
+$transicion-rapida: all 0.2s;
+$transicion-media: all 0.8s;
+$border-r: 10px;
+$border-r-medio: 20px;
+$border-r-grande: 30px;
+
+@mixin italica-negrita{
+    font-style: italic;
+    font-weight: bold;
+}
+@mixin movimiento-carousel{
+    display: block;
+    opacity: 0;
+    transition: opacity ease-out .7s;
+}
+@mixin bordes-arriba{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+@mixin bordes-abajo{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.campeones{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: auto;
+    margin-bottom: 30px;
+
+    user-select: none;
+    box-shadow: $sombras;
+    transition: $transicion-media;
+
+    div{
+        transition: $transicion-media;
+        img{
+            width: 550px;
+            height: 350px;
+
+            margin: 25px 15px 0px 15px;
+
+            @include bordes-arriba;
+        }
+
+        h5{
+            background-color: black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 50px;
+            color: white;
+            text-align: center;
+
+            margin-left: 15px;
+            margin-right: 15px;
+
+            @include italica-negrita;
+            @include bordes-abajo;
+        }
+    }
+    div:hover{
+        transition: $transicion-media;
+        transform: scale(1.08,1.08);
+    }
+}
+
+/*MediaQueries Página Campeones*/
+@media only screen and (max-width: 700px){
+    .campeones{
+        div{
+            img{
+                width: 360px;
+                height: 250px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 445px){
+    .campeones{
+        div{
+            img{
+                width: 280px;
+                height: 170px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 352px){
+    .campeones{
+        div{
+            img{
+                width: 240px;
+                height: 150px;
+            }
+        }
+    }
+}

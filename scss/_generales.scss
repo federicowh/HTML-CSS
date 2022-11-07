@@ -1,0 +1,40 @@
+$color-background: #bfbfbf;
+$color-amarillo: #EBA272;
+$sombras: 0 0 20px rgba(0, 0, 0, 0.55);
+$transicion-rapida: all 0.2s;
+$transicion-media: all 0.8s;
+$border-r: 10px;
+$border-r-medio: 20px;
+$border-r-grande: 30px;
+
+@mixin italica-negrita{
+    font-style: italic;
+    font-weight: bold;
+}
+@mixin medidas-body{
+    margin: 3rem 0 0 0;
+    padding: 0 1.6rem;
+    padding-left: calc(68px + 1rem);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $color-background;
+
+    position: relative;
+    @include medidas-body;
+
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1rem;
+
+    transition: $transicion-rapida;
+}
+
+a{
+    text-decoration: none
+}

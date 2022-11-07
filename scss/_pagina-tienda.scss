@@ -1,0 +1,97 @@
+$color-background: #bfbfbf;
+$color-amarillo: #EBA272;
+$sombras: 0 0 20px rgba(0, 0, 0, 0.55);
+$transicion-rapida: all 0.2s;
+$transicion-media: all 0.8s;
+$border-r: 10px;
+$border-r-medio: 20px;
+$border-r-grande: 30px;
+
+@mixin italica-negrita{
+    font-style: italic;
+    font-weight: bold;
+}
+@mixin animacion-fondo{
+    background: linear-gradient(-45deg, #000000, #000000, #bfbfbf, #bfbfbf);
+    background-size: 400% 400%;
+    animation: gradient 6s ease-in-out infinite;
+    transition: transform .3s;
+}
+
+.tienda{
+    box-shadow: $sombras;
+    .container{
+
+        .card:hover{
+            transform: translateY(-15px);
+            transition: transform .3s;
+        }
+        .card{
+            @keyframes gradient{
+                0%{
+                    background-position: 0 50%;
+                }
+            
+                50%{
+                    background-position: 100% 50%;
+                }
+            
+                100%{
+                    background-position: 0 50%;
+                }
+            }
+            @include animacion-fondo;
+
+            margin-bottom: 30px;
+
+            outline: none;
+            user-select: none;
+
+            border-radius: $border-r-medio;
+            box-sizing: $sombras;
+            img{
+                width: 80%;
+            }
+
+            h5{
+                color: white;
+                font-size: 1.8rem;
+                @include italica-negrita;
+            }
+
+            .texto1{
+                color: white;
+                font-weight: normal;
+                font-size: 1rem;
+            }
+
+            .texto2{
+                color: greenyellow;
+            }
+
+            .estrellas{
+                color: $color-amarillo;
+            }
+
+            .precio span{
+                color: white;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+            
+            .comprar{
+                background-color: black;
+                border-bottom-right-radius: 15px;
+                border-bottom-left-radius: 15px;
+
+                a{
+                    color: white;
+                    @include italica-negrita;
+                }
+                a:hover{
+                    color: $color-amarillo;
+                }
+            }
+        }
+    }
+}

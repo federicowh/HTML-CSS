@@ -1,0 +1,46 @@
+:root {
+    --color-background: #bfbfbf;
+    --color-amarillo: #EBA272;
+    --sombras: 0 0 20px rgba(0, 0, 0, 0.55);
+    --transicion-rapida: all 0.2s;
+    --transicion-media: all 0.8s;
+    --transicion-lenta: all 2;
+    --border-r: 10px;
+    --border-r-grande: 30px;
+}
+
+/*Generales*/
+@import "generales";
+
+/*Encabezado - Menu Lateral - Redes Sociales*/
+@import "encabezado-menu";
+
+/*Página Inicio*/
+@import "pagina-index";
+
+/*Títulos de las Páginas*/
+@import "titulo-paginas";
+
+/*Página Campeones*/
+@import "pagina-campeones";
+
+/*Página Noticias*/
+@import "pagina-noticias";
+
+/*Página Multimedia*/
+@import "pagina-multimedia";
+
+/*Página Tienda*/
+@import "pagina-tienda";
+
+/*Página Torneos*/
+@import "pagina-torneos";
+
+/*Página Registro*/
+@import "pagina-registro";
+
+/*Footer*/
+@import "footer";
+
+/*Error 404*/
+@import "error-404";

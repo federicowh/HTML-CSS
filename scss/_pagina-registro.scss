@@ -1,0 +1,148 @@
+$color-background: #bfbfbf;
+$color-amarillo: #EBA272;
+$sombras: 0 0 20px rgba(0, 0, 0, 0.55);
+$transicion-rapida: all 0.2s;
+$transicion-media: all 0.8s;
+$border-r: 10px;
+$border-r-medio: 20px;
+$border-r-grande: 30px;
+
+@mixin italica-negrita{
+    font-style: italic;
+    font-weight: bold;
+}
+
+/*Formulario*/
+.contenedor{
+    background-image: url("../media/img/galeria/banner 3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 20px;
+    margin-bottom: 30px;
+
+    user-select: none;
+    box-shadow: $sombras;
+
+    .registro{
+        background-color: black;
+        color: white;
+
+        width: 50%;
+        margin: auto;
+
+        text-align: center;
+
+        opacity: .95;
+
+        border-radius: $border-r;
+        padding: 0px 20px 20px 20px;
+
+        img{
+            width: 150px;
+            height: 150px;
+            transition: all .5s;
+        }
+        img:hover{
+            transition: all .5s;
+            transform: scale(1.3,1.3);
+        }
+
+        hr{
+            border: 1px solid #bfbfbf;
+            margin-top: 0px;
+            margin-bottom: 25px;
+        }
+
+        button{
+            background-color: $color-amarillo;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        button:hover{
+            opacity: 1;
+        }
+
+        input[type=text], 
+        input[type=password]{
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #bfbfbf;
+        }
+
+        input[type=text]:focus, 
+        input[type=password]:focus{
+            background-color: white;
+            outline: none;
+        }
+
+        p{
+            padding-top: 8px;
+        }
+    }
+}
+
+/*Video Loop Final*/
+.loop-final{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-height: 570px;
+
+    overflow: hidden;
+
+    box-shadow: $sombras;
+
+    img{
+        position: absolute;
+        width: 30%;
+    }
+
+    .loop-contenedor{
+        width: 100%;
+
+        video{
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+/*MediaQueries Página Registro*/
+@media screen and (max-width: 1200px){
+    .contenedor{
+        .registro{
+            width: 60%;
+            padding: 30px 50px 30px 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .contenedor{
+        .registro{
+            width: 80%;
+            padding: 30px 50px 30px 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .contenedor{
+        .registro{
+            width: 100%;
+            padding: 10px 10px 10px 10px;
+        }
+    }
+}
